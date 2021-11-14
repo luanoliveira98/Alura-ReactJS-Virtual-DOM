@@ -42,16 +42,23 @@ const React = {
 
 // ==================================
 
+function Title() {
+  return React.createElement("h1", null, "Counter 2");
+}
+
 function App(props) {
   return (
-    React.createElement("section", {
-      className: "App"
-    }),
-    React.createElement("h1", null, "Counter"),
+    React.createElement(
+      "section", 
+      {
+        className: "App"
+      },
+    React.createElement(Title, null),
     React.createElement("div", null,
     React.createElement("div", null, "0"),
     React.createElement("button", null, "Increment"),
     React.createElement("button", null, "Decrement"))
+    )
   );
 }
 
